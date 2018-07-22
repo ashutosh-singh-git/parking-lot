@@ -79,6 +79,7 @@ public class ParkingServiceImpl implements ParkingService {
             System.out.println("Cannot create parking lot with " + slots + " slots");
             return;
         }
+        parkingRepository.deleteAll();
         for (int i = 1; i <= slots; i++) {
             ParkingSlot vehicle = new ParkingSlot();
             vehicle.setSlotNo(i);
