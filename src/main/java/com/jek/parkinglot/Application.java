@@ -22,20 +22,32 @@ public class Application implements CommandLineRunner {
     private CommandHandler commandHandler;
 
     @Override
-    public void run(String... strings) {
-        Scanner scanIn = new Scanner(System.in);
-        String text;
-        System.out.println("Welcome !");
-        do {
-            System.out.print("$ ");
-            text = scanIn.nextLine();
-            String[] arguments = text.trim().split(" ");
-            if (Commands.commandsSet.contains(arguments[0])) {
-                commandHandler.executeCommand(arguments);
-            } else {
-                System.out.println("Unknown command '"+ arguments[0] +"'.");
+    public void run(String... commands) {
+
+        if(commands.length > 0){
+            for (String command : commands) {
+                String[] arguments = command.trim().split(",");
+                if (Commands.commandsSet.contains(arguments[0])) {
+                    commandHandler.executeCommand(arguments);
+                } else {
+                    System.out.println("Unknown command '"+ arguments[0] +"'.");
+                }
             }
-        } while (!"EXIT".equalsIgnoreCase(text));
-        scanIn.close();
+        }else {
+            Scanner scanIn = new Scanner(System.in);
+            String text;
+            System.out.println("Welcome !");
+            do {
+                System.out.print("$ ");
+                text = scanIn.nextLine();
+                String[] arguments = text.trim().split(" ");
+                if (Commands.commandsSet.contains(arguments[0])) {
+                    commandHandler.executeCommand(arguments);
+                } else {
+                    System.out.println("Unknown command '"+ arguments[0] +"'.");
+                }
+            } while (!"EXIT".equalsIgnoreCase(text));
+            scanIn.close();
+        }
     }
 }

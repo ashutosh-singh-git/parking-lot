@@ -42,11 +42,11 @@ public class CommandHandler {
                     System.out.println("Bye Bye");
                     break;
                 default:
-                    System.out.println("Command not found!. Type 'exit' to terminate");
+                    System.out.println("Command not found!");
                     break;
             }
         } catch (Exception e) {
-            //Nothing to do here.
+            //Nothing to do here, no logging of exception.
         }
     }
 }
