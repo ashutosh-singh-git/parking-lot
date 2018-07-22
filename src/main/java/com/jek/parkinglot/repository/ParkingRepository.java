@@ -1,6 +1,6 @@
 package com.jek.parkinglot.repository;
 
-import com.jek.parkinglot.model.Vehicle;
+import com.jek.parkinglot.model.ParkingSlot;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -10,16 +10,20 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ParkingRepository extends JpaRepository<Vehicle, Integer> {
+public interface ParkingRepository extends JpaRepository<ParkingSlot, Integer> {
 
-    List<Vehicle> findAllByOccupiedTrue();
+    List<ParkingSlot> findAllByOccupiedTrue();
 
-    Vehicle findFirstByOccupiedFalse();
+    List<ParkingSlot> findAllByOccupiedTrueAndColor(String colour);
 
-    Vehicle findBySlotNo(int slotNo);
+    ParkingSlot findByOccupiedTrueAndRegistrationNo(String colour);
+
+    ParkingSlot findFirstByOccupiedFalse();
+
+    ParkingSlot findBySlotNo(int slotNo);
 
     @Modifying
-    @Query("update com.jek.parkinglot.model.Vehicle ci set ci.occupied=:occupied where ci.slotNo = :slotNo")
+    @Query("update com.jek.parkinglot.model.ParkingSlot ci set ci.occupied=:occupied where ci.slotNo = :slotNo")
     int updateOccupancyBySlotNo(@Param("occupied") boolean occupied, @Param("slotNo") int slotNo);
 
 }

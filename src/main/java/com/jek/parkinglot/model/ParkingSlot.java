@@ -1,13 +1,18 @@
 package com.jek.parkinglot.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-public class Vehicle {
+@Table(uniqueConstraints={@UniqueConstraint(columnNames={"registrationNo"})})
+public class ParkingSlot {
 
     @Id
     private int slotNo;
+    @Column(name = "registrationNo")
     private String registrationNo;
     private String color;
     private boolean occupied;
@@ -17,6 +22,13 @@ public class Vehicle {
     }
 
     public void setSlotNo(int slotNo) {
+        this.slotNo = slotNo;
+    }
+
+    public ParkingSlot() {
+    }
+
+    public ParkingSlot(int slotNo) {
         this.slotNo = slotNo;
     }
 
@@ -46,6 +58,6 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return slotNo + "           " + registrationNo + "      " + color;
+        return slotNo + "           " + registrationNo + "       " + color;
     }
 }
