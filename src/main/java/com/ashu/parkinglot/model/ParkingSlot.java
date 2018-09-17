@@ -1,4 +1,4 @@
-package com.jek.parkinglot.model;
+package com.ashu.parkinglot.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,6 +1,6 @@
-package com.jek.parkinglot.repository;
+package com.ashu.parkinglot.repository;
 
-import com.jek.parkinglot.model.ParkingSlot;
+import com.ashu.parkinglot.model.ParkingSlot;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

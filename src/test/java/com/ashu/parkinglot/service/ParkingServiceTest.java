@@ -1,9 +1,9 @@
-package com.jek.parkinglot.service;
+package com.ashu.parkinglot.service;
 
-import com.jek.parkinglot.Application;
-import com.jek.parkinglot.model.ParkingSlot;
-import com.jek.parkinglot.repository.ParkingRepository;
-import com.jek.parkinglot.service.impl.ParkingServiceImpl;
+import com.ashu.parkinglot.Application;
+import com.ashu.parkinglot.model.ParkingSlot;
+import com.ashu.parkinglot.repository.ParkingRepository;
+import com.ashu.parkinglot.service.impl.ParkingServiceImpl;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

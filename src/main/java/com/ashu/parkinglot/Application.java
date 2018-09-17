@@ -1,7 +1,7 @@
-package com.jek.parkinglot;
+package com.ashu.parkinglot;
 
-import com.jek.parkinglot.component.CommandHandler;
-import com.jek.parkinglot.util.Commands;
+import com.ashu.parkinglot.component.CommandHandler;
+import com.ashu.parkinglot.util.Commands;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-package com.jek.parkinglot.service;
+package com.ashu.parkinglot.service;
 
 public interface ParkingService {
 

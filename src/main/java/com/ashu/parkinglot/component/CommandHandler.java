@@ -1,7 +1,7 @@
-package com.jek.parkinglot.component;
+package com.ashu.parkinglot.component;
 
-import com.jek.parkinglot.service.ParkingService;
-import com.jek.parkinglot.util.Commands;
+import com.ashu.parkinglot.service.ParkingService;
+import com.ashu.parkinglot.util.Commands;
 import org.springframework.stereotype.Component;
 
 @Component

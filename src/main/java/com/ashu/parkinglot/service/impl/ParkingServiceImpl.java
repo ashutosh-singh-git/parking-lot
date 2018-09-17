@@ -1,8 +1,8 @@
-package com.jek.parkinglot.service.impl;
+package com.ashu.parkinglot.service.impl;
 
-import com.jek.parkinglot.model.ParkingSlot;
-import com.jek.parkinglot.repository.ParkingRepository;
-import com.jek.parkinglot.service.ParkingService;
+import com.ashu.parkinglot.model.ParkingSlot;
+import com.ashu.parkinglot.repository.ParkingRepository;
+import com.ashu.parkinglot.service.ParkingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
